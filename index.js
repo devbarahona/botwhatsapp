@@ -66,7 +66,7 @@ client.on('message', async (msg) => {
   try {
     switch (msg.body.toLowerCase()) {
       case '!stiker':
-      case '!sticker':
+      case '.s':
       case 'st':
         if(msg.hasMedia){
           const media = await msg.downloadMedia();
@@ -79,7 +79,7 @@ client.on('message', async (msg) => {
           );
           console.log(chalk.green(`💬 ${contact.pushname} : Sticker sent!\n`));
         } else {
-          msg.reply('Send image with caption !sticker');
+          msg.reply('enviar la imagen, video o gif con el texto ".s o st');
         };
         break;
       case '!error':
